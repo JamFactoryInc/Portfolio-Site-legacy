@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'comic-serif';
+    src: url('/resources/fonts/hvd_comic_serif/HVD_Comic_Serif_Pro.otf');
+}
+
+@font-face {
+    font-family: 'comfortaa';
+    src: url('/resources/fonts/comfortaa/Comfortaa-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'comfortaa-bold';
+    src: url('/resources/fonts/comfortaa/Comfortaa-Bold.ttf');
+}
+
+body {
+    margin: 0;
+    background-color: #131313;
+}
+
+p {
+    margin: 0;
+}
+
+.icon-div {
+    /*background-color: #111;*/
+    width: 150px;
+    display: inline-block;
+}
+
+.icon-img-div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.icon-text-div {
+    display: inline-block;
+}
+
+.icon {
+    display: block;
+    max-height: 4vh;
+    margin-left: 0;
+    margin-right: auto;
+    background-color: #161616;
+    padding: 1vh;
+}
+
+.icon-text {
+    font-size: 100%;
+    font-family: 'comfortaa-bold';
+    text-align: center;
+    color: #BBB;
+}
+
+.header-div:hover {
+    background-color: #111;
+}
+
+.img {
+    display: block;
+    size: 50vw;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+
+/* Links inside the navbar */
+
+.navbar .button {
+    float: left;
+    color: white;
+    text-align: center;
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+    font-size: 1.8vh;
+    font-family: 'comfortaa-bold';
+    text-align: center;
+    color: #BBB;
+    padding: 2vh;
+}
+
+
+/* The dropdown container */
+
+.dropdown {
+    float: left;
+    font-size: 1.8vh;
+    font-family: 'comfortaa-bold';
+    text-align: center;
+    color: #BBB;
+}
+
+
+/* Dropdown button */
+
+.dropdown .dropbtn {
+    padding: 2vh;
+    font-size: 1.8vh;
+    border: none;
+    outline: none;
+    color: #BBB;
+    background-color: inherit;
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+
+/* Add a red background color to navbar links on hover */
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+
+/* Dropdown content (hidden by default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+/* Add a grey background color to dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header-div {
+    background-color: #222;
+    float: left;
+}
+
+
+/*Horizontal*/
+
+@media (min-aspect-ratio: 1/1) {
+    .right-img {
+        margin: 0;
+        padding: 0;
+        float: right;
+        max-width: 50vw;
+        background-color: #161616;
+    }
+    .left-img {
+        float: left;
+        max-width: 50vw;
+        background-color: #161616;
+    }
+    .title {
+        background-color: #111;
+        font-size: 2vw;
+        font-family: comfortaa;
+        padding: 1.1vh;
+        color: rgb(219, 44, 73);
+        border-right: 50.5vw solid rgb(219, 44, 73);
+    }
+    .description {
+        background-color: #EEE;
+        font-size: 1vw;
+        font-family: comfortaa;
+        padding: 3vh;
+        color: #222;
+        line-height: 160%;
+    }
+}
+
+
+/*Vertical*/
+
+@media (max-aspect-ratio: 1/1) {
+    .right-img {
+        max-width: 100%;
+        background-color: #161616;
+    }
+    .left-img {
+        max-width: 100%;
+        background-color: #161616;
+    }
+    .title {
+        background-color: #111;
+        font-size: 4vw;
+        font-family: comfortaa;
+        padding: 1.1vh;
+        color: rgb(219, 44, 73);
+    }
+    .description {
+        background-color: #EEE;
+        font-size: 3vw;
+        font-family: comfortaa;
+        padding: 3vh;
+        color: #222;
+        line-height: 160%;
+    }
+}
