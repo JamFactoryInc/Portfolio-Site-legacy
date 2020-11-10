@@ -13,6 +13,21 @@
     src: url('/resources/fonts/comfortaa/Comfortaa-Bold.ttf');
 }
 
+@font-face {
+    font-family: 'gravity';
+    src: url('/resources/fonts/gravity/Gravity-Regular.otf');
+}
+
+@font-face {
+    font-family: 'gravity-light';
+    src: url('/resources/fonts/gravity/Gravity-UltraLight.otf');
+}
+
+@font-face {
+    font-family: 'gravity-bold';
+    src: url('/resources/fonts/gravity/Gravity-Bold.otf');
+}
+
 body {
     margin: 0;
     background-color: #131313;
@@ -20,6 +35,44 @@ body {
 
 p {
     margin: 0;
+}
+
+#jam {
+    font-family: 'gravity-bold';
+    font-size: 5vw;
+    color: rgb(219, 44, 73);
+    padding: 0;
+}
+
+#jam2 {
+    font-family: 'gravity-light';
+    font-size: 5vw;
+    color: rgb(219, 159, 170);
+    padding: 0;
+}
+
+#name1 {
+    padding: 0;
+    text-align: right;
+    padding-right: 30%;
+}
+
+#name2 {
+    text-align: right;
+    padding-right: 30%;
+    margin-top: -5%;
+    margin-left: 10vw;
+}
+
+#name-stack-div {
+    text-align: right;
+    margin-top: -15%;
+    padding-left: 33%;
+}
+
+#name-stack {
+    padding-right: 28%;
+    width: 16%;
 }
 
 .icon-div {
@@ -167,41 +220,106 @@ p {
 
 /*Horizontal*/
 
-@media (min-aspect-ratio: 1/1) {
+@media only screen and (orientation: landscape) {
     .right-img {
         margin: 0;
         padding: 0;
         float: right;
-        max-width: 50vw;
+        width: 50%;
         background-color: #161616;
+        flex: 2;
+        height: 48.2vw;
     }
     .left-img {
+        margin: 0;
+        padding: 0;
         float: left;
-        max-width: 50vw;
+        width: 55%;
         background-color: #161616;
+        flex: 100%;
+        height: 48.2vw;
     }
-    .title {
+    .title-left {
         background-color: #111;
-        font-size: 2vw;
+        font-size: 1.7vw;
         font-family: comfortaa;
-        padding: 1.1vh;
+        padding: 1.1vw;
+        text-align: right;
         color: rgb(219, 44, 73);
-        border-right: 50.5vw solid rgb(219, 44, 73);
+        border-right: .5vw solid rgb(219, 44, 73);
+        height: 2vw;
+    }
+    .title-right {
+        background-color: #111;
+        font-size: 1.7vw;
+        font-family: comfortaa;
+        padding: 1.1vw;
+        text-align: left;
+        color: rgb(63, 104, 182);
+        border-left: .5vw solid rgb(63, 104, 182);
+        height: 2vw;
     }
     .description {
-        background-color: #EEE;
         font-size: 1vw;
-        font-family: comfortaa;
-        padding: 3vh;
+        font-family: gravity;
+        padding-bottom: 1vw;
+        padding-left: 1vw;
         color: #222;
         line-height: 160%;
+        border-left: .2vw solid #222;
+        flex: 100%;
+    }
+    .description-block {
+        background-color: white;
+        font-size: 1vw;
+        font-family: gravity;
+        padding: 4vw;
+        padding-right: 1vw;
+        padding-left: 6vw;
+        color: #222;
+        line-height: 160%;
+        flex: 100%;
+        height: 41.8vw;
+        padding-top: 0;
+        width: auto;
+        max-height: 40vw;
+    }
+    .description-title {
+        font-size: 2vw;
+        font-family: comfortaa;
+        padding: 1vw;
+        padding-top: 5vh;
+        margin-left: -1.2vw;
+        color: #222;
+        flex: 100%;
+    }
+    .left-right-flex {
+        display: flex;
+    }
+    .up-down-flex-left {
+        display: block flex;
+        flex-wrap: hide;
+        max-width: 45%;
+        margin-left: auto;
+        flex-basis: 100px;
+    }
+    .up-down-flex-right {
+        display: block flex;
+        flex-wrap: hide;
+        max-width: 50%;
+    }
+    #footer {
+        bottom: 0;
+        background-color: #111;
+        position: fixed;
+        width: 100%;
     }
 }
 
 
 /*Vertical*/
 
-@media (max-aspect-ratio: 1/1) {
+@media only screen and (orientation: portrait) {
     .right-img {
         max-width: 100%;
         background-color: #161616;
@@ -210,19 +328,41 @@ p {
         max-width: 100%;
         background-color: #161616;
     }
-    .title {
+    .title-left,
+    .title-right {
         background-color: #111;
         font-size: 4vw;
-        font-family: comfortaa;
+        font-family: gravity;
         padding: 1.1vh;
         color: rgb(219, 44, 73);
+        margin-top: -.5vh;
+        border-top: .5vw solid rgb(219, 44, 73);
+        text-align: center;
     }
     .description {
         background-color: #EEE;
         font-size: 3vw;
         font-family: comfortaa;
-        padding: 3vh;
+        padding-bottom: 3vh;
+        padding-left: 3vh;
         color: #222;
         line-height: 160%;
+    }
+    .description-block {
+        background-color: #EEE;
+        font-size: 1vw;
+        font-family: gravity;
+        padding: 4vw;
+        padding-left: 6vw;
+        color: #222;
+        line-height: 160%;
+    }
+    .description-title {
+        font-size: 5vw;
+        font-family: comfortaa;
+        padding-bottom: 5vw;
+        padding-top: 5vh;
+        text-align: center;
+        color: #222;
     }
 }
