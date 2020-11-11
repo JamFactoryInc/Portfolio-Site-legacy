@@ -322,31 +322,44 @@ p {
     a:visited {
         text-decoration: none;
     }
-    .white-box {
+    .white-boxes-grid {
+        display: flex;
+        width: 100%;
+        margin-left: 50vw;
+    }
+    .white-boxes-grid>div {
+        margin: .5%;
         width: 10%;
         background-color: #EEE;
+        border-color: rgb(219, 159, 170);
         padding: 1%;
         padding-top: 1px;
         border-radius: 6px;
-        border-color: rgb(219, 159, 170);
         border-style: solid;
         border-width: 1px;
         text-align: center;
     }
-    .white-box>h1 {
+    .white-boxes-grid>div>h1 {
         color: #111;
         font-family: renogare;
         text-align: center;
         margin-top: 3%;
+        padding: 10%;
     }
-    .white-box>p {
+    .white-boxes-grid>div>p {
         color: #111;
         font-family: renogare;
         text-align: left;
         padding: 0;
         margin-top: -7%;
+        padding-top: 5%;
+        padding-bottom: 20%;
+        border-top-style: solid;
+        border-width: 1px;
+        border-color: rgb(219, 159, 170);
     }
-    .white-box>button {
+    .white-boxes-grid>div>button {
+        transition-duration: 100ms;
         color: #111;
         font-family: renogare;
         font-size: large;
@@ -357,6 +370,22 @@ p {
         background-color: rgb(219, 44, 73);
         border-radius: 6px;
         border: none;
+    }
+    .white-boxes-grid>div>button:focus {
+        border: none;
+        outline: none;
+    }
+    .white-boxes-grid>div>button:hover {
+        transition-duration: 100ms;
+        border: none;
+        outline: none;
+        background-color: rgb(231, 68, 95);
+    }
+    .white-boxes-grid>div>button:active {
+        transition-duration: 100ms;
+        background-color: rgb(182, 37, 61);
+        border: none;
+        outline: none;
     }
 }
 
