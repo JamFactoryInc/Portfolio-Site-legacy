@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'comic-serif';
-    src: url('/resources/fonts/hvd_comic_serif/HVD_Comic_Serif_Pro.otf');
+    font-family: 'roboto';
+    src: url('/resources/fonts/rounded_elegance/Rounded_Elegance.ttf');
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'gravity';
-    src: url('/resources/fonts/gravity/Gravity-Regular.otf');
+    src: url('/resources/fonts/gravity/Gravity-Light.otf');
 }
 
 @font-face {
@@ -28,51 +28,18 @@
     src: url('/resources/fonts/gravity/Gravity-Bold.otf');
 }
 
+@font-face {
+    font-family: 'renogare';
+    src: url('/resources/fonts/sansation/Sansation_Regular.ttf');
+}
+
 body {
     margin: 0;
-    background-color: #131313;
+    background-color: #1a1a1a;
 }
 
 p {
     margin: 0;
-}
-
-#jam {
-    font-family: 'gravity-bold';
-    font-size: 5vw;
-    color: rgb(219, 44, 73);
-    padding: 0;
-}
-
-#jam2 {
-    font-family: 'gravity-light';
-    font-size: 5vw;
-    color: rgb(219, 159, 170);
-    padding: 0;
-}
-
-#name1 {
-    padding: 0;
-    text-align: right;
-    padding-right: 30%;
-}
-
-#name2 {
-    text-align: right;
-    padding-right: 30%;
-    margin-top: -5%;
-    margin-left: 10vw;
-}
-
-#name-stack-div {
-    text-align: right;
-    margin-top: -15%;
-    padding-left: 33%;
-}
-
-#name-stack {
-    padding-right: 28%;
-    width: 16%;
 }
 
 .icon-div {
@@ -221,6 +188,34 @@ p {
 /*Horizontal*/
 
 @media only screen and (orientation: landscape) {
+    #jam {
+        font-family: 'renogare';
+        font-size: 5vw;
+        color: white;
+        padding: 0;
+    }
+    #jam2 {
+        font-family: 'roboto';
+        font-size: 5vw;
+        color: rgb(219, 159, 170);
+        padding: 0;
+    }
+    #name1 {
+        padding: 0;
+        text-align: right;
+        padding-right: 30%;
+    }
+    #name2 {
+        text-align: right;
+        padding-right: 18.1%;
+        margin-top: -4%;
+        margin-left: 10vw;
+    }
+    .jam-description {
+        font-family: gravity-bold;
+        font-size: 1vw;
+        color: white;
+    }
     .right-img {
         margin: 0;
         padding: 0;
@@ -313,6 +308,55 @@ p {
         background-color: #111;
         position: fixed;
         width: 100%;
+        padding: .3%;
+    }
+    .footer-img {
+        padding: .5%;
+        padding-top: .1%;
+        padding-bottom: .1%;
+        width: 1%;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:visited {
+        text-decoration: none;
+    }
+    .white-box {
+        width: 10%;
+        background-color: #EEE;
+        padding: 1%;
+        padding-top: 1px;
+        border-radius: 6px;
+        border-color: rgb(219, 159, 170);
+        border-style: solid;
+        border-width: 1px;
+        text-align: center;
+    }
+    .white-box>h1 {
+        color: #111;
+        font-family: renogare;
+        text-align: center;
+        margin-top: 3%;
+    }
+    .white-box>p {
+        color: #111;
+        font-family: renogare;
+        text-align: left;
+        padding: 0;
+        margin-top: -7%;
+    }
+    .white-box>button {
+        color: #111;
+        font-family: renogare;
+        font-size: large;
+        text-align: center;
+        padding: 5%;
+        width: 100%;
+        margin-top: 4%;
+        background-color: rgb(219, 44, 73);
+        border-radius: 6px;
+        border: none;
     }
 }
 
@@ -320,6 +364,29 @@ p {
 /*Vertical*/
 
 @media only screen and (orientation: portrait) {
+    #jam {
+        font-family: 'renogare';
+        font-size: 10vw;
+        color: white;
+        padding: 0;
+    }
+    #jam2 {
+        font-family: 'roboto';
+        font-size: 5vw;
+        color: rgb(219, 159, 170);
+        padding: 0;
+    }
+    #name1 {
+        padding: 0;
+        text-align: right;
+        padding-right: 40%;
+        width: 80%;
+    }
+    #name2 {
+        text-align: right;
+        padding-right: 20vw;
+        margin-top: -8%;
+    }
     .right-img {
         max-width: 100%;
         background-color: #161616;
@@ -364,5 +431,17 @@ p {
         padding-top: 5vh;
         text-align: center;
         color: #222;
+    }
+    #footer {
+        bottom: 0;
+        background-color: #111;
+        position: fixed;
+        width: 100%;
+        padding: .3%;
+    }
+    .footer-img {
+        padding-left: 4%;
+        padding-top: 1%;
+        height: 5vh;
     }
 }
