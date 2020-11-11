@@ -390,23 +390,23 @@ p {
         border-radius: 6px;
         border: none;
     }
-    .white-boxes-grid>div>button:focus {
+    .white-boxes-grid>div>a>button:focus {
         border: none;
         outline: none;
     }
-    .white-boxes-grid>div>button:hover {
+    .white-boxes-grid>div>a>button:hover {
         transition-duration: 100ms;
         border: none;
         outline: none;
         background-color: rgb(231, 68, 95);
     }
-    .white-boxes-grid>div>button:active {
+    .white-boxes-grid>div>a>button:active {
         transition-duration: 100ms;
         background-color: rgb(182, 37, 61);
         border: none;
         outline: none;
     }
-    .white-boxes-grid>div>button:hover .fa-angle-right {
+    .white-boxes-grid>div>a>button:hover .fa-angle-right {
         margin-left: 2%;
         transition-duration: 100ms;
     }
