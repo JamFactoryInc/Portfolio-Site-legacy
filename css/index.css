@@ -88,6 +88,7 @@ p {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
+    display: flex;
 }
 
 
@@ -215,6 +216,19 @@ p {
         font-family: gravity-bold;
         font-size: 1vw;
         color: white;
+        padding-left: 15vw;
+        width: 30vw;
+        padding-bottom: 1%;
+    }
+    .jam-sub-description {
+        font-family: gravity;
+        font-size: 1vw;
+        color: white;
+        padding-left: 15vw;
+        width: 30vw;
+    }
+    .jam-sub-description ul {
+        list-style-type: '- ';
     }
     .right-img {
         margin: 0;
@@ -326,6 +340,8 @@ p {
         display: flex;
         width: 100%;
         margin-left: 50vw;
+        position: absolute;
+        top: 50vh;
     }
     .white-boxes-grid>div {
         margin: .5%;
@@ -340,11 +356,14 @@ p {
         text-align: center;
     }
     .white-boxes-grid>div>h1 {
+        padding-bottom: 5%;
+        padding-top: 5%;
+        font-size: 150%;
         color: #111;
         font-family: renogare;
         text-align: center;
         margin-top: 3%;
-        padding: 10%;
+        width: 100%;
     }
     .white-boxes-grid>div>p {
         color: #111;
@@ -358,7 +377,7 @@ p {
         border-width: 1px;
         border-color: rgb(219, 159, 170);
     }
-    .white-boxes-grid>div>button {
+    .white-boxes-grid>div>a>button {
         transition-duration: 100ms;
         color: #111;
         font-family: renogare;
@@ -386,6 +405,13 @@ p {
         background-color: rgb(182, 37, 61);
         border: none;
         outline: none;
+    }
+    .white-boxes-grid>div>button:hover .fa-angle-right {
+        margin-left: 2%;
+        transition-duration: 100ms;
+    }
+    .fa-angle-right {
+        transition-duration: 100ms;
     }
 }
 
