@@ -185,6 +185,16 @@ p {
     float: left;
 }
 
+.link {
+    color: rgb(219, 44, 73);
+    text-decoration: underline;
+}
+
+.link:visited {
+    color: rgb(219, 44, 73);
+    text-decoration: underline;
+}
+
 
 /*Horizontal*/
 
