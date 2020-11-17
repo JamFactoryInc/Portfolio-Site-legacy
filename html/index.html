@@ -6,26 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://kit.fontawesome.com/9ad53a0800.js" crossorigin="anonymous"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../js/index.js"></script>
     <title>Kieran's Portfolio</title>
 
 
 
     <div class="navbar">
-        <div class='header-div'>
+        <div class='header-div-img'>
             <a href="../html/index.html">
                 <img class='icon' src="/resources/images/flat.png">
             </a>
         </div>
         <div class='header-div'>
-            <a href="about-me.html" class='button'>About Me</a>
+            <a href="../html/about-me.html" class='button'>
+                <p class='nav-button'>
+                    About Me
+                </p>
+            </a>
+        </div>
+        <div class='header-div'>
+            <a href="../html/contact.html" class='button'>
+                <p class='nav-button'>
+                    Contact
+                </p>
+            </a>
+        </div>
+        <div class='header-div'>
+            <a href="../html/resume.html" class='button'>
+                <p class='nav-button'>
+                    Resume
+                </p>
+            </a>
         </div>
         <div class='header-div'>
             <div class="dropdown">
-                <button class="dropbtn">
-                    Projects
-                    <i class="fa fa-caret-down"></i>
-                </button>
+                <a class="dropbtn">
+                    <p class='nav-button'>
+                        Projects
+
+                        <i class="fa fa-caret-down"></i>
+                    </p>
+                </a>
                 <div class="dropdown-content">
                     <a href="../html/this-site.html">This Site</a>
                     <a href="../html/java-game-engine.html">Java Game Engine</a>
@@ -43,11 +65,11 @@
             Hi, I'm Kieran
         </h1>
     </div>
-    <div id='name2'>
-        <h1 id='jam2'>
-            Full Stack Java;
-        </h1>
-    </div>
+    <!-- <div id='name2'>
+            <h1 id='jam2'>
+                Full Stack Java;
+            </h1>
+        </div> -->
     <div class='jam-description'>
         I'm a full-stack Java developer and always learning more.
     </div>
@@ -74,9 +96,9 @@
             </p>
             <a href="https://www.freecodecamp.org/jamfactory" target="_blank">
                 <Button id="button1">
-                    
-                    My Progress <i class="fas fa-angle-right fa-xs"></i>
-                </Button>
+                        
+                        My Progress <i class="fas fa-angle-right fa-xs"></i>
+                    </Button>
             </a>
         </div>
         <div>
@@ -88,8 +110,8 @@
             </p>
             <a href="https://www.google.com" target="_blank">
                 <Button id="button2">
-                    View <i class="fas fa-angle-right fa-xs"></i>
-                </Button>
+                        View <i class="fas fa-angle-right fa-xs"></i>
+                    </Button>
             </a>
         </div>
         <div>
@@ -101,8 +123,8 @@
             </p>
             <a href="https://github.com/JamFactoryInc" target="_blank">
                 <Button id="button3">
-                View <i class="fas fa-angle-right fa-xs"></i>
-                </Button>
+                    View <i class="fas fa-angle-right fa-xs"></i>
+                    </Button>
             </a>
         </div>
     </div>
