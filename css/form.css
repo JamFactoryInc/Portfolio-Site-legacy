@@ -41,6 +41,13 @@ textarea {
     -webkit-appearance: none;
 }
 
+#submit-error {
+    width: 96%;
+    justify-self: flex-end;
+    padding: 1%;
+    color: rgb(182, 37, 61);
+}
+
 input:focus,
 textarea:focus {
     outline: none;
