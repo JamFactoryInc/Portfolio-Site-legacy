@@ -19,7 +19,7 @@ form {
 
 form div {
     width: 80%;
-    padding: 20px;
+    padding: 10px;
 }
 
 input,
@@ -46,6 +46,13 @@ textarea:focus {
     box-shadow: 0pt 0pt 1pt 1pt rgb(255, 255, 255);
 }
 
+#submit-button,
+#submit-button:focus,
+#submit-button:active {
+    outline: none;
+    box-shadow: none;
+}
+
 @media only screen and (max-width:750px) {
     form {
         width: 100%;
@@ -53,5 +60,9 @@ textarea:focus {
     body {
         background-image: none;
         background-color: #111;
+    }
+    form div {
+        padding: 0 auto;
+        margin-left: -10px;
     }
 }
