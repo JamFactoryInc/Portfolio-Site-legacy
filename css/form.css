@@ -38,6 +38,7 @@ textarea {
     width: 80%;
     background-color: rgb(182, 37, 61);
     border: none;
+    -webkit-appearance: none;
 }
 
 input:focus,
