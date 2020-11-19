@@ -211,55 +211,45 @@ p {
 /*Horizontal*/
 
 @media only screen and (orientation: landscape) {
+    .grid-container {
+        margin: 2% auto 0 auto;
+        display: grid;
+        grid-template-areas: "title title" "desc boxes";
+        grid-template-rows: 30% 70%;
+        height: 90vh;
+        width: 90vw;
+    }
     #jam {
         font-family: 'renogare';
-        font-size: 800%;
+        font-size: calc(100% + 6vw);
         color: white;
         padding: 0;
-        position: absolute;
+        position: relative;
         right: 10%;
-        top: 1vw;
-    }
-    #jam2 {
-        justify-content: left;
-        font-family: 'roboto';
-        font-size: 100px;
-        color: rgb(219, 159, 170);
-        padding: 0;
-        position: absolute;
-        right: 100px;
-        top: 140px;
+        margin-top: 3vh;
     }
     #name1 {
         padding: 0;
-        text-align: right;
-        padding-right: 30%;
-    }
-    #name2 {
         text-align: left;
-        padding-right: 18.1%;
-        margin-top: -4%;
-        padding-left: 47.2vw;
-        width: 30%;
+        padding-left: 10%;
+        grid-area: title;
     }
     .jam-description {
         font-family: gravity-bold;
-        font-size: 200%;
+        font-size: 2vw;
         color: white;
         width: 40vw;
         padding-bottom: 1%;
-        position: absolute;
-        top: 40vh;
-        left: 100px;
+        position: relative;
+        grid-area: desc;
     }
     .jam-sub-description {
         font-family: gravity;
-        font-size: 120%;
+        font-size: 1.5vw;
         color: white;
         width: 30vw;
-        position: absolute;
-        top: 55vh;
-        left: 100px;
+        position: relative;
+        grid-area: desc;
     }
     .jam-sub-description ul {
         list-style-type: '- ';
@@ -373,14 +363,15 @@ p {
     .white-boxes-grid {
         align-self: right;
         display: flex;
-        width: 50%;
-        margin-left: 50%;
-        position: absolute;
-        top: 50vh;
+        width: 100%;
+        position: relative;
+        top: 0;
+        grid-area: boxes;
+        font-size: 1vw;
     }
     .white-boxes-grid>div {
         margin: .5%;
-        width: 200px;
+        width: 30%;
         background-color: #EEE;
         border-color: rgb(219, 159, 170);
         padding: 1%;
@@ -389,6 +380,10 @@ p {
         border-style: solid;
         border-width: 1px;
         text-align: center;
+        max-height: 15vw;
+        display: grid;
+        grid-template-areas: "title" "desc" "button";
+        grid-template-rows: 1fr 2fr 1fr;
     }
     .white-boxes-grid>div>h1 {
         padding-bottom: 5%;
@@ -399,6 +394,7 @@ p {
         text-align: center;
         margin-top: 3%;
         width: 100%;
+        grid-area: title;
     }
     .white-boxes-grid>div>p {
         color: #111;
@@ -411,13 +407,14 @@ p {
         border-top-style: solid;
         border-width: 1px;
         border-color: rgb(219, 159, 170);
+        grid-area: desc;
     }
     .white-boxes-grid>div>a>button,
     #submit-button {
         transition-duration: 100ms;
         color: #111;
         font-family: renogare;
-        font-size: large;
+        font-size: 1.5vw;
         text-align: center;
         padding: 5%;
         width: 100%;
@@ -425,6 +422,7 @@ p {
         background-color: rgb(219, 44, 73);
         border-radius: 6px;
         border: none;
+        grid-area: button;
     }
     #button1 {
         border-radius: 6px 6px 6px 2fr;
@@ -459,8 +457,8 @@ p {
         margin: 2% auto 0 auto;
         display: grid;
         grid-template-areas: "title boxes" "desc boxes";
-        grid-template-rows: 2fr 5fr;
-        height: 100vh;
+        grid-template-rows: 1fr 5fr;
+        height: 90vh;
         width: 90vw;
     }
     #jam {
@@ -696,16 +694,16 @@ p {
         font-family: gravity-bold;
         font-size: 180%;
         color: white;
-        width: 60vw;
+        width: 100%;
         padding-bottom: 1%;
-        top: 40vh;
-        left: 100px;
+        text-align: center;
     }
     .jam-sub-description {
         font-family: gravity;
         font-size: 120%;
         color: white;
-        width: 60vw;
+        margin: 1% auto;
+        width: 80%;
         top: 55vh;
         left: 100px;
     }
