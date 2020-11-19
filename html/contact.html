@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <script src="https://kit.fontawesome.com/9ad53a0800.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
     <title>Kieran's Portfolio</title>
 
 
@@ -78,40 +79,6 @@
 
             <input type="button" value="Send Email" onclick="sendEmail()" id="submit-button">
         </div>
-        <script>
-            function sendEmail() {
-                let errormsg = document.getElementById('submit-error');
-                let submit = document.getElementById('submit-button');
-                let form = document.getElementById('form');
-                if (form.checkValidity()) {
-
-                    if (submit.value == "Send Email") {
-                        var templateParams = {
-                            email: document.getElementById('email-input').value,
-                            message: document.getElementById('message-input').value
-                        };
-                        submit.value = "Sent!";
-                        submit.style.backgroundColor = "#111";
-                        submit.style.color = "#EEE";
-                        document.getElementById('email-input-div').style.display = 'none';
-                        document.getElementById('message-input-div').style.display = 'none';
-
-                        errormsg.textContent = "";
-
-                        emailjs.send('service_becskri', 'template_j3wwa4o', templateParams, 'user_GyV8SgPk4F0RQTr0bTlSX')
-                            .then(function(response) {
-                                console.log('SUCCESS!', response.status, response.text);
-                            }, function(error) {
-                                console.log('FAILED...', error);
-                            });
-                    }
-                } else {
-
-                    errormsg.textContent = "All fields must be filled!";
-
-                }
-            }
-        </script>
         <p id="submit-error">
         </p>
     </form>

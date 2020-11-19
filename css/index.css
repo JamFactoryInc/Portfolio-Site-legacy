@@ -455,49 +455,53 @@ p {
 }
 
 @media only screen and (max-width: 1445px) and (orientation: landscape) {
-    #jam {
-        font-family: 'renogare';
-        font-size: calc(1% + 5vh + 5vw);
-        color: white;
-        padding: 0;
-        position: absolute;
-        left: 10px;
-        top: 30px;
+    .grid-container {
+        margin: 2% auto 0 auto;
+        display: grid;
+        grid-template-areas: "title boxes" "desc boxes";
+        grid-template-rows: 2fr 5fr;
+        height: 100vh;
+        width: 90vw;
     }
-    #jam2 {
-        justify-content: left;
-        font-family: 'roboto';
-        font-size: 6vw;
-        color: rgb(219, 159, 170);
+    #jam {
+        position: relative;
+        font-family: 'renogare';
+        font-size: calc(100% + 5vw);
+        color: white;
+        right: 0;
         padding: 0;
-        position: absolute;
-        left: 10vw;
-        top: 110px;
+        margin: 0;
     }
     #name1 {
+        position: relative;
         padding: 0;
-        text-align: left;
-        padding-right: 30%;
+        margin: 0;
+        text-align: right;
+        grid-area: title;
     }
-    #name2 {
-        text-align: left;
-        padding-right: 18.1%;
-        margin-top: -4%;
-        padding-left: 47.2vw;
-        width: 30%;
+    .desc {
+        grid-area: desc;
+        position: relative;
+        margin: 0;
     }
     .white-boxes-grid {
+        grid-area: boxes;
         flex-direction: column;
-        position: fixed;
-        top: 10vh;
-        margin-left: 60%;
-        height: 80vh;
+        max-height: 90%;
+        min-height: calc(200px + 30vw);
+        width: 80%;
+        top: 0;
+        margin: 0 0 0 10%;
+        padding: 0;
+        font-size: 1.5vw;
+        position: relative;
     }
     .white-boxes-grid>div {
-        width: 35vw;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        max-height: 30%;
+        display: grid;
+        grid-template-areas: "title" "desc" "button";
+        grid-template-rows: 2fr 5fr 2fr;
         /*
         background-color: #EEE;
         border-color: rgb(219, 159, 170);
@@ -508,37 +512,47 @@ p {
         border-width: 1px;
         text-align: center;*/
     }
+    .white-boxes-grid>div h1 {
+        padding-top: 1%;
+        width: 100%;
+        margin: 0;
+        grid-area: title;
+    }
     .white-boxes-grid>div p {
+        margin: 0 auto;
         padding-bottom: 1%;
         padding-top: 1%;
         width: 80%;
-    }
-    .white-boxes-grid>div h1 {
-        padding-top: 1%;
+        grid-area: desc;
     }
     .white-boxes-grid>div a button {
         padding: 2% 1%;
-        width: 50%;
-        margin-top: 15%;
+        margin: 0;
+        width: 60%;
+    }
+    .white-boxes-grid>div a {
+        grid-area: button;
     }
     .jam-description {
         font-family: gravity-bold;
-        font-size: 150%;
+        font-size: 3vw;
         color: white;
         width: 40vw;
+        margin: 0;
+        top: 0;
+        left: 0;
         padding-bottom: 1%;
-        position: absolute;
-        top: 35vh;
-        left: 100px;
+        position: relative;
     }
     .jam-sub-description {
         font-family: gravity;
-        font-size: 100%;
+        font-size: 2vw;
         color: white;
         width: 30vw;
-        position: absolute;
-        top: 50vh;
-        left: 100px;
+        margin: 0;
+        top: 0;
+        left: 0;
+        position: relative;
     }
 }
 
