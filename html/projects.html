@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <link href="/css/prism.css" rel="stylesheet" />
+    <script src="/js/prism.js"></script>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/project.js"></script>
+    <title>Portfolio</title>
+</head>
+
+
+<header>
+    <link href="https://fonts.googleapis.com/css?family=Jura:200i,300,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200i,300,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/project.css">
+
+    <script src="https://kit.fontawesome.com/9ad53a0800.js" crossorigin="anonymous"></script>
+    <nav id="navbar">
+        <a id='jam-icon' href="./index.html" class='nav-toggle'>
+            <img id='jam-icon-svg' src="../resources/images/jam.svg" alt="Jam">
+        </a>
+
+
+    </nav>
+    <glossary>
+
+    </glossary>
+</header>
+
+<body>
+    <overlay onclick="this.classList.toggle('show-overlay')"><img class='overlay-img' src="/resources/images/literally-the-server.png" alt=""></overlay>
+    <scroll><span></span></scroll>
+    <section id='apache-web-server' class='project'>
+        <div class='h2'>
+            <div class='section-title'>
+                KieranSmith.in
+            </div>
+            <div class='content'>
+                What went into this site
+
+
+                <div class='h3'>
+                    Technologies used:
+                    <div class='content'>
+
+
+                        <div class='h3'>
+                            Apache2 Web Server on a Raspberry Pi
+                            <div class='content'>
+                                Downloading and running apache on a Raspberry Pi is more easy than I thought it would be. There was a little bit of hassle when it came to changing the configuration to point to a git repo folder rather than the example index.html, but after that it's
+                                been plug and play.
+                            </div>
+                        </div>
+                        <div class='h3'>
+                            HTML/JS/CSS with a splash of JQuery
+                            <div class='content'>
+                                While able to use Vue.js and learning React.js at the time of making this, I decided to make this site using mostly vanilla JS to see what I could do.
+                                <img class='left' src="/resources/images/literally-the-server.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <pre name='Example Code'><code class="language-javascript code">
+            $(document).ready(function() {
+                var morpheusConfig = {
+                        duration: 200,
+                        rotation: 'none'
+                    },
+                    shapesIcon = new SVGMorpheus('#shapes-icon', morpheusConfig),
+                    infoIcon = new SVGMorpheus('#info-icon', morpheusConfig),
+                    githubIcon = new SVGMorpheus('#github-icon', morpheusConfig);
+            
+                var clicked = false;
+            
+                $('.current-page').children().css('fill', '#111');
+            
+                $(window).scroll(function() {
+            
+                    if (!clicked) {
+                        $('.nav-toggle').removeClass('current-page');
+                        $('.nav-toggle').children().css('fill', '#AAA');
+                    } else {
+                        clicked = false;
+                    }
+                    if ($(window).scrollTop() = 0) {
+                        $('#info').addClass('current-page');
+                        $('.current-page').children().css('fill', '#111');
+                    }
+                });
+            
+                $('.nav-toggle').mousedown(function() {
+                    clicked = true;
+                    $('.nav-toggle').children().css('fill', 'rgb(1,200,1)');
+                    $('.nav-toggle').removeClass('current-page');
+                    $(this).addClass('current-page');
+                });
+            
+            
+                $('.nav-toggle').mouseup(function() {
+                    $(this).children().css('fill', '#111')
+                });
+            
+                $('.shapes-toggle').click(function() {
+                    shapesIcon.to('shapes');
+                    $("#shapes-icon").css("padding-left", "unset");
+                })
+            
+                $('.project-tile').click(function() {
+                    window.location.replace(window.location.origin + '/html/projects.html#' + this.id);
+                })
+            
+                $('.shapes-toggle').hover(function() {
+            
+                    $(this).toggleClass('toggle-on');
+                    if (!$(this).hasClass('current-page')) {
+                        if ($(this).hasClass('toggle-on')) {
+                            if ($(window).scrollTop()  $('#projects').position().top) {
+                                shapesIcon.to('link');
+                            } else {
+                                shapesIcon.to('linkup');
+                            }
+            
+                            $("#shapes-icon").css("padding-left", "8px");
+                        } else {
+                            shapesIcon.to('shapes');
+                            $("#shapes-icon").css("padding-left", "unset");
+                            $("#shapes-icon").css("fill", "#AAA");
+                        }
+                    }
+                });
+            
+                $('.github-toggle').hover(function() {
+                    $(this).toggleClass('toggle-on');
+            
+                    if ($(this).hasClass('toggle-on')) {
+                        githubIcon.to('exlink');
+                    } else {
+                        githubIcon.to('github');
+                        $("#github-icon").css("fill", "#AAA");
+                    }
+                });
+            
+            
+                $('.info-toggle').click(function() {
+                    infoIcon.to('info');
+                    $("#info-icon").css("padding-left", "unset");
+                })
+                $('.info-toggle').hover(function() {
+            
+                    $(this).toggleClass('toggle-on');
+                    if (!$(this).hasClass('current-page')) {
+                        if ($(this).hasClass('toggle-on')) {
+                            if ($(window).scrollTop() = $('#welcome-section').position().top) {
+                                infoIcon.to('link');
+                            } else {
+                                infoIcon.to('linkup');
+                            }
+                            $("#info-icon").css("padding-left", "8px");
+                        } else {
+                            infoIcon.to('info');
+                            $("#info-icon").css("padding-left", "unset");
+                            $("#info-icon").css("fill", "#AAA");
+                        }
+                    }
+                });
+            });
+        </code></pre>
+    </section>
+    <section id='comic-collection-site' class='project'>
+        <div class='h2'>
+            <div class='section-title'>
+                Comic Collection Site
+            </div>
+            <div class='content'>
+                The capstone for my full stack certification
+
+
+                <div class='h3'>
+                    Technologies used:
+                    <div class='content'>
+
+
+                        <div class='h3'>
+                            Vue.js
+                            <div class='content'>
+                                Downloading and running apache on a Raspberry Pi is more easy than I thought it would be. There was a little bit of hassle when it came to changing the configuration to point to a git repo folder rather than the example index.html, but after that it's
+                                been plug and play.
+                            </div>
+                        </div>
+                        <div class='h3'>
+                            RESTful Java API
+                            <div class='content'>
+                                While able to use Vue.js and learning React.js at the time of making this, I decided to make this site using mostly vanilla JS to see what I could do.
+                            </div>
+                        </div>
+
+                        <div class='h3'>
+                            PostgreSQL
+                            <div class='content'>
+                                The required persistent storage for this project was in the form of a PSQL database that we could set up to our needs.
+                            </div>
+                        </div>
+                    </div>
+
+                    Description
+                    <div class='content'>
+                        The site itself is live <a href="../external/phl2-team-blue-capstone/vue/dist/index.html">here</a>
+                    </div>
+
+                    Features
+                    <div class='content'>
+                        Search
+                        <div class='content'>
+                            The project included substring-matching search of both users and collections in our database, but due to the limitation of the Marvel Comics API we were using, we could only enable searching comics character by character. E.g. searching 'Spider Man' would
+                            not yield the reselt 'The Amazing Spider Man.'
+                        </div>
+
+                        Accounts
+                        <div class='content'>
+                            The site enabled the user to register and log into accounts. Registered users could create collections, add friends, and comment. In addition, a user could change their username which was both used to log in and shown as their name, as well as set the
+                            description that others would see when navigating to their user page. Unregistered users could look through public collections and little else.
+                        </div>
+
+                        Collections
+                        <div class='content'>
+                            A registered user could create a collection of any name and privacy, and once created, could search through our catalogue of Marvel comics and add any of their choosing. Private collections could only be seen by a user's friends
+                        </div>
+
+                        Friends
+                        <div class='content'>
+                            Our site implemented a friend request system. To add a friend, you could search for them using the users search, click on their profile, and send them a request. When the user next logged in and viewed their profile, they would see incoming and outgoing
+                            friend request, with the option to either accept or deny your request. Upon either choice, you would be sent a message saying what they had chosen, and if they accepted, you would then be friends and could view each others'
+                            private collections.
+                        </div>
+
+                        Comments
+                        <div class='content'>
+                            Any logged-in user could view a collection and leave comments of limited length with their name.
+                        </div>
+                    </div>
+
+                    What I Learned
+                    <div class='content'>
+                        Organization
+                        <div class='content'>
+                            We as a team had a two-week deadline to adhere to, and naturally had to be very organised. We made a Trello board of To-do/Doing/Done and assigned roles that seemed roughly equal in difficulty. Working in this way made it easier than previously experienced
+                            because eeach team member's responsibilites and expectations were established from day one.
+                        </div>
+                        Collaberation
+                        <div class='content'>
+                            I was designated the role of back-end programmer. I set up the Java server and core functionality of the website while one member set up the database and the remaining two worked on the Vue.js site. Once completing my part, I and the database member went
+                            on to aid in the Vue.js. I often involve myself with too many things, and had to trust that my team members had a handle on their jobs so I could focus on my own.
+                        </div>
+                        Time management
+                        <div class='content'>
+                            On the first day, my group mates and I marathoned a 10-hour work day in order to kickstart the project. When we were half way into the allotted time, we realized this time commitment was necessary from the start, and had we not started strong, we would
+                            not have finished by the deadline. Overall, there could have been improvement, as I consistently worked 12 hour days to finish the site in time.
+                        </div>
+                        Communication
+                        <div class='content'>
+                            To ensure that we were collaberating effectively, we set up a Discord server, similar to a slack group, to call every day and quickly notify each other of issues. I realized it was very helpful to allot a time every day to organize our thoughts so far
+                            and share what needed to be done.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id='comic-collection-site' class='project'>
+
+    </section>
+</body>
