@@ -5,7 +5,8 @@ $(document).ready(function() {
         },
         shapesIcon = new SVGMorpheus('#shapes-icon', morpheusConfig),
         infoIcon = new SVGMorpheus('#info-icon', morpheusConfig),
-        githubIcon = new SVGMorpheus('#github-icon', morpheusConfig);
+        githubIcon = new SVGMorpheus('#github-icon', morpheusConfig),
+        linkedinIcon = new SVGMorpheus('#linkedin-icon', morpheusConfig);
 
     var icons = {
         'shapes': [shapesIcon, '#projects', '#shapes-icon'],
@@ -109,6 +110,17 @@ $(document).ready(function() {
         } else {
             githubIcon.to('github');
             $("#github-icon").css("fill", "#AAA");
+        }
+    });
+
+    $('.linkedin-toggle').hover(function() {
+        $(this).toggleClass('toggle-on');
+
+        if ($(this).hasClass('toggle-on')) {
+            linkedinIcon.to('exlink');
+        } else {
+            linkedinIcon.to('linkedin');
+            $("#linkedin-icon").css("fill", "#AAA");
         }
     });
 

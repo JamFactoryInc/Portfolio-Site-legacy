@@ -1,0 +1,6 @@
+import requests
+import socket
+from requests.auth import HTTPBasicAuth
+
+url = 'https://ydns.io/api/v1/update/?host=ks.kieransmith.in'
+print(requests.get(url, auth = HTTPBasicAuth('aLfo3tlu8kWqzdEHKmHs', 'QWKBF6JDA5E15A5NU8DVVK4I69HCQF')))

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var deg = Math.random() * 360;
+    var deg = 130;
     var scrollPercentage = 0;
     var navHeight = $(window).height() / 20;
     var scroll = $('scroll')
