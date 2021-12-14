@@ -52,7 +52,7 @@ $(document).ready(function() {
     })
 
     $('.project-tile').click(function() {
-        window.location.replace(window.location.origin + '/html/projects.html#' + this.id);
+        window.location.replace(window.location.origin + '/projects/' + this.id + '/html/index.html');
     })
 
     function morph(iconID) {

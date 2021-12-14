@@ -6,9 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="../js/main.js"></script>
     <title>Portfolio</title>
+    <div id='disclaimer'>
+        <i class="fas fa-times" onclick="$('#disclaimer').hide()"></i>
+        <h3>This site is under construction!</h3>
+        <p>I'm still working on this website, so don't be surprised if things are incomplete or missing</p>
+    </div>
+    <style>
+        #disclaimer {
+            position: fixed;
+            bottom: 2vh;
+            background-color: black;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin-left: 20%;
+            width: 60%;
+            z-index: 10;
+        }
+        
+        #disclaimer .fas {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+        }
+        
+        #disclaimer .fas:hover {
+            color: gray;
+        }
+    </style>
 </head>
 
 
@@ -129,7 +158,6 @@
 				</p>
 			</button>
         </a>
-
     </nav>
 </header>
 
@@ -151,7 +179,6 @@
             </h1>
         </div>
         <div class='project-tiles'>
-
             <div class="project-tile" id="apache-web-server">
                 <h2 class="project-title">
                     kieransmith.in
@@ -161,25 +188,24 @@
                 </p>
                 <img class="project-image" src="/resources/images/literally-the-server.png">
             </div>
-            <div class="project-tile" id="mock-payment-api">
-
+            <div class="project-tile" id="game-of-life">
                 <h2 class="project-title">
-                    Payload Compiler
+                    Game of Life
                 </h2>
                 <p>
-                    Easy-to-use lexer using two layers of regex to generate tokens and allow for pattern-string mapping
+                    A basic implementation of John Conway's Game of Life. This was one of my first projects using the PixiJS graphics library
                 </p>
-                <img class="project-image" src="https://wvs.topleftpixel.com/photos/scotia_plaza_tall_stitched.jpg">
+                <img class="project-image" src="/resources/images/game-of-life.png">
 
             </div>
             <div class="project-tile" id='comic-collection-site'>
                 <h2 class="project-title">
-                    MCL
+                    Minecraft Command Lanugage
                 </h2>
                 <p>
-                    Using Payload, I designed a language to more-easily develop complex behavior for Minecraft creations
+                    I created a program to translate Python bytecode into Minecraft Datapacks
                 </p>
-                <img class="project-image" src="https://wvs.topleftpixel.com/photos/scotia_plaza_tall_stitched.jpg">
+                <img class="project-image" src="/resources/images/mcl.png">
             </div>
             <div class="project-tile">
                 <h2 class="project-title">

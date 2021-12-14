@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var deg = 130;
+    var deg = -15;
     var scrollPercentage = 0;
     var navHeight = $(window).height() / 20;
     var scroll = $('scroll')
@@ -16,7 +16,7 @@ $(document).ready(function() {
     $("body").get(0).style.setProperty("--secondary", "hsl(" + (deg + 40) + ", 74%, 55% )");
     $("body").get(0).style.setProperty("--background-color-light", "hsl(" + deg + ", 74%, 8% )");
     $("body").get(0).style.setProperty("--background-color", "hsl(" + deg + ", 74%, 5% )");
-    $("body").get(0).style.setProperty("--background-color-dark", "hsl(" + deg + ", 74%, 3% )");
+    $("body").get(0).style.setProperty("--background-color-dark", "hsl(" + deg + ", 74%, 5% )");
 
     $("#jam-icon-svg").css("filter", "hue-rotate( " + (deg + 10) + "deg)");
 

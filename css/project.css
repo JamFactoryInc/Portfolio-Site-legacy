@@ -43,10 +43,13 @@ section {
     font-family: Roboto;
     margin: 0;
     max-width: 70vw;
-    padding: 20px 0px;
+    padding: 20px !important;
     font-size: 400%;
     color: var(--raspberry-light);
     font-weight: lighter;
+    background-color: rgba(41, 30, 33, 0.2);
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .h2 {
@@ -95,8 +98,8 @@ scroll {
 .content {
     padding-left: 20px;
     font-size: 70%;
-    border-left: var(--raspberry-light);
-    border-left-style: solid;
+    /*border-left: var(--raspberry-light);
+    border-left-style: solid;*/
     border-left-width: 1px;
     color: white;
 }
@@ -188,19 +191,27 @@ pre.is-collapsed {
     color: var(--raspberry-vibrant)!important;
 }
 
+img {
+    border-radius: 20px;
+}
+
 img:not(.overlay-img) {
     margin-top: 20px;
-    width: 100%;
+    max-width: 100%;
     cursor: pointer !important;
     transition: filter .3s;
+    transition: transform .3s;
+    display: block;
 }
 
 img:not(.overlay-img):hover {
     filter: brightness(.7);
+    transform: scale(1.05)
 }
 
-img.left {
+img.right {
     width: 50%;
+    float: right;
 }
 
 .highlighted {
