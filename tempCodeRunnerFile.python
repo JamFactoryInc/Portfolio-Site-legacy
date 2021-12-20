@@ -1,56 +1,23 @@
-ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+import json
+result = {
+    "participants": [
+        {
+          "name": "Alaina Back"
+        },
+        {
+          "name": "Kieran Smith"
+        }
+    ],
+    "messages" : [
 
-LAST_LETTER = 'K'
-
-relation = {c for c in ALPHA if ord(c) <= ord(LAST_LETTER)}
-
-class FD:
-    functional_dependencies = []
-    ways_to_get = {}
-    def __init__(self, tables:set) -> None:
-        self.tables = tables
-        FD.functional_dependencies.append(self)
-
-    def implies(self, tables:set):
-        self.implies = tables.union(self.tables)
-        return self
-
-    def calculate_lookup():
-        for table in relation:
-            for fd in FD.functional_dependencies:
-                if table in fd.implies:
-                    if table in FD.ways_to_get:
-                        FD.ways_to_get[table].append(fd)
-                    else:
-                        FD.ways_to_get[table] = [fd]
-    def generate_all_fds():
-        for _ in range(len(relation)):
-            print(FD.functional_dependencies)
-            for fd1 in FD.functional_dependencies.copy():
-                for fd2 in FD.functional_dependencies.copy():
-                    if fd1.tables.issubset(fd2.implies):
-                        fd1 = FD(fd1.tables).implies(fd2.implies)
-
-    def calculate_candidates():
-        FD.calculate_lookup()
-        FD.generate_all_fds()
-        print(FD.ways_to_get)
-        for fd in FD.functional_dependencies:
-            if fd.implies == relation:
-                print(fd)
-
-    def __repr__(self) -> str:
-        lists = (list(self.tables), list(self.implies))
-        lists[0].sort(); lists[1].sort()
-        return f"{''.join(lists[0])} -> {''.join(lists[1])}"
-
-FD({'A', 'B'}).implies({'G', 'J', 'K'})
-FD({'E'}).implies({'D'})
-FD({'H'}).implies({'F','I','J'})
-FD({'D','C','F'}).implies({'B','E'})
-FD({'K'}).implies({'C','A'})
-
-FD.calculate_candidates()
-
-
-
+    ]
+    }
+for i in range(7):
+    with open(r'C:\Users\jam\Downloads\facebook-kieransmith3152130\messages\inbox\alainaback_dqriwhjzza\message_{}.json'.format(i + 1)) as file:
+        convo = json.loads(file.read())
+        for message in convo['messages']:
+            if 'call_duration' in message:
+                result["messages"].append(message)
+f = open(r"C:\Users\jam\Downloads\call_log.json", "w")
+f.write(json.dumps(result))
+f.close()

@@ -201,8 +201,8 @@ h1 {
 
 #projects {
     background-color: var(--background-color-dark);
-    height: unset;
     padding: 5vh 0;
+    height: 90vh;
 }
 
 #my-projects {

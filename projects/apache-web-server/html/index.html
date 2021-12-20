@@ -1,0 +1,66 @@
+<header>
+    <link rel="stylesheet" href="../../project.css">
+    <script src="../../project.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Jura:200i,300,400&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <a id='back-button' href="../../../html/index.html#projects">
+        < Back </a>
+            <style>
+                #back-button {
+                    font-family: Jura, sans-serif;
+                    position: fixed;
+                    top: 0;
+                    left: 10px;
+                    z-index: 10;
+                    color: rgb(44, 44, 44);
+                    text-decoration: none;
+                    font-size: 200%;
+                    transition: all 0.1s;
+                    z-index: 200;
+                }
+                
+                #back-button:hover {
+                    color: #d12c55;
+                    left: 0;
+                    transition: all 0.1s;
+                }
+            </style>
+</header>
+
+<body>
+    <section id='title'>
+        <h1>
+            kieransmith<b>.in</b>
+        </h1>
+        <h2>
+            Basic website hosted with Apache2
+        </h2>
+    </section>
+    <svg version="1.1" id="scroll-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+            <path d="M97.73,28.9L51.39,52.03c-0.89,0.37-1.89,0.37-2.78,0L2.27,28.9C0.9,28.33,0,26.99,0,25.51v0c0-2.6,2.64-4.37,5.05-3.38
+	            l43.56,22c0.89,0.37,1.89,0.37,2.78,0l43.56-22c2.41-0.99,5.05,0.78,5.05,3.38v0C100,26.99,99.1,28.33,97.73,28.9z"/>
+            <path d="M97.73,58.83L51.39,81.97c-0.89,0.37-1.89,0.37-2.78,0L2.27,58.83C0.9,58.27,0,56.93,0,55.45v0c0-2.6,2.64-4.37,5.05-3.38
+	            l43.56,22c0.89,0.37,1.89,0.37,2.78,0l43.56-22c2.41-0.99,5.05,0.78,5.05,3.38v0C100,56.93,99.1,58.27,97.73,58.83z"/>
+        </svg>
+    <section id='down-button' onclick="$('#main').toggleClass('active');$('#leading-red').toggleClass('active');">
+        <section id='down-button-overlay'></section>
+        <section id='down-button-overlay-two'>
+
+            <svg version="1.1" id="press-me" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                <path d="M50,0C22.39,0,0,22.39,0,50s22.39,50,50,50s50-22.39,50-50S77.61,0,50,0z M50,92.09C26.76,92.09,7.91,73.24,7.91,50
+                    S26.76,7.91,50,7.91S92.09,26.76,92.09,50S73.24,92.09,50,92.09z"/>
+                    <text x="50%" y="50%" font-size="1.5em" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="var(--raspberry)">VIEW</text>
+            </svg>
+
+        </section>
+        <span id='glow'></span>
+    </section>
+    <section id='leading-red'></section>
+    <section id='main'>
+
+    </section>
+
+
+
+</body>
